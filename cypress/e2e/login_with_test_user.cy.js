@@ -9,7 +9,7 @@ describe('Login with test user from fixture', () => {
 
     // Load user data from fixture
     cy.fixture('users').then((users) => {
-      cy.get('input[type="email"]').type(users.validUser.username)
+      cy.get('input[type="email"]').type(users.validUser.email).screenshot('email-typed') // take screenshot after typing email
       cy.get('input[type="password"]').type(users.validUser.password).screenshot('password-typed') // take screenshot after typing password
 
       cy.get('input[type="submit"]').click()
