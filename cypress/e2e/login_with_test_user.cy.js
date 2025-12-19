@@ -17,8 +17,6 @@ describe('Login with test user from fixture', () => {
       cy.screenshot()// take screenshot after login
       
     }) 
-
-   
    
    })
 
