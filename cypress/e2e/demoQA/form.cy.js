@@ -17,8 +17,23 @@ describe('Testing DemoQA Forms', () => {
     cy.get('#lastName').type('Vidanagamage')
     //type email
     cy.get('#userEmail').type('sachinthavida@gmail.com')
+    //select gender
+    cy.get  ('input[value="Male"]').check({force:true})
+    //type mobile number        
+    cy.get('#userNumber').type('0702964365')
+   // Open date picker
+cy.get('#dateOfBirthInput').click()
 
-    
+// Select year
+cy.get('.react-datepicker__year-select').select('1998')
+
+// Select month
+cy.get('.react-datepicker__month-select').select('August')
+
+// Select day 9 (safe way)
+cy.get('.react-datepicker__day--009')
+  .not('.react-datepicker__day--outside-month')
+  .click()
 
   })    
 })   
