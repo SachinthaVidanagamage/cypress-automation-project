@@ -38,7 +38,11 @@ cy.get('.react-datepicker__day--009')
 cy.get('#subjectsInput').type('Computer Science{enter}')
 //select hobbies
 cy.get('input[type="checkbox"][value="1"]').check({force:true}) 
-cy.get('input[type="checkbox"][value="2"]').check({force:true})     
+cy.get('input[type="checkbox"][value="2"]').check({force:true})    
+//type address
+cy.get('#currentAddress').type('No 146,Kekanadura,Matara') 
+//submit form
+cy.get('#submit').click({force:true})
     
 
   })    
