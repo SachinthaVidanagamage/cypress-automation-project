@@ -34,6 +34,12 @@ cy.get('.react-datepicker__month-select').select('August')
 cy.get('.react-datepicker__day--009')
   .not('.react-datepicker__day--outside-month')
   .click()
+//type subject   
+cy.get('#subjectsInput').type('Computer Science{enter}')
+//select hobbies
+cy.get('input[type="checkbox"][value="1"]').check({force:true}) 
+cy.get('input[type="checkbox"][value="2"]').check({force:true})     
+    
 
   })    
 })   
